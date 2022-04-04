@@ -1,0 +1,149 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+
+  .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 1s all ease;
+    @include Responsive(XS) {
+      width: 65.2vw;
+    }
+  }
+
+  .navbar-brand {
+    img {
+      @include Responsive(XS) {
+        width: 65%;
+        height: auto;
+      }
+    }
+  }
+
+  &-menu {
+    width: 100%;
+    height: 160px;
+    position: fixed;
+    transition: 0.3s all ease;
+    padding: 0 5%;
+
+    @include Responsive(XS) {
+      height: 13.466vw;
+    }
+
+    .menu {
+      @include Responsive(MD) {
+        position: absolute;
+        top: 50%;
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        display: block;
+      }
+
+      li {
+        .nav-link {
+          line-height: 1;
+          color: #fff;
+          transition: 0.3s all ease;
+          font-weight: 700;
+          @include Responsive(MD) {
+            font-size: 8vw;
+            color: #231815;
+          }
+
+          &:hover {
+            opacity: .6;
+          }
+        }
+
+        @include Responsive(MD) {
+          margin-bottom: 3vw
+        }
+      }
+    }
+  }
+}
+
+.fixed {
+  .logo {
+    display: none;
+  }
+
+  .header-menu {
+    height: 100px !important;
+    background: rgba(255, 255, 255, 0.95);
+    @include Responsive(XS) {
+      height: 13.5vw !important;
+    }
+
+    .menu {
+      li {
+        .nav-link {
+          color: #231815 !important;
+        }
+      }
+    }
+  }
+
+  .menu-trigger {
+    span {
+      background-color: #231815;
+    }
+  }
+}
+
+.menu-trigger {
+  position: absolute;
+  top: 4.133vw;
+  right: 5.33vw;
+  width: 5.866vw;
+  height: 5.2vw;
+  background: none;
+  border: none;
+  appearance: none;
+  cursor: pointer;
+  z-index: 9;
+
+  span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0.4vw;
+    background-color: #fff;
+
+    &:first-of-type {
+      top: 0;
+    }
+
+    &:nth-of-type(2) {
+      top: calc(50% - 0.2vw);
+    }
+
+    &:last-of-type {
+      bottom: 0;
+    }
+  }
+}
+
+.menu-trigger.active {
+  span {
+    background-color: #231815;
+
+    &:first-of-type {
+      transform: translateY(2.42vw) rotate(-45deg);
+    }
+
+    &:nth-of-type(2) {
+      opacity: 0;
+    }
+
+    &:last-of-type {
+      transform: translateY(-2.42vw) rotate(45deg);
+    }
+  }
+}

@@ -1,0 +1,86 @@
+/**
+ * Blog Title 1
+ */
+
+.box-title {
+  position: relative;
+  h2.title {
+    text-align: center;
+    line-height: 1;
+    font-size: 50px;
+    color: #231815;
+    font-weight: 700;
+    position: relative;
+    padding: 15px 0;
+    margin-bottom: 48px;
+    text-transform: uppercase;
+    @include Responsive(XS) {
+      font-size: 8.66vw;
+      margin-bottom: 6.66vw;
+    }
+  }
+  img {
+    position: absolute;
+    bottom: 100%;
+    left: calc((100% - 92px)/2);
+    width: 92px;
+    @include Responsive(XS) {
+      width: 15vw;
+      left: calc((100% - 15vw)/2);
+    }
+  }
+}
+
+h1.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%) scaleX(0.87);
+  letter-spacing: 0.3em;
+  color: #fff;
+  font-size: 70px;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  text-shadow: 0 0 15px rgb(0 0 0);
+  @include Responsive(XS) {
+    font-size: 12.2vw;
+    text-shadow: 0 0 2vw rgb(0 0 0);
+    line-height: 1.29;
+  }
+}
+
+h3.title {
+  font-size: 30px;
+  line-height: 1;
+  padding-left: 24px;
+  position: relative;
+  font-weight: bold;
+  margin-bottom: 20px;
+  @include Responsive(XS) {
+    font-size: 6vw;
+    padding-left: 4.8vw;
+    margin-bottom: 3.33vw;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 7px;
+    background: #d0111b;
+  }
+}
+
+.title-24 {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 20px;
+  @include Responsive(XS) {
+    font-size: 18px;
+    margin-bottom: 10.66vw;
+  }
+}

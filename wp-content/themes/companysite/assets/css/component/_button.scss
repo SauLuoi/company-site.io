@@ -1,0 +1,47 @@
+.button-danger{
+  background: $color-btn-hover !important;
+  color: $text-color-white !important;
+}
+.button-primary{
+  background: $color-primary  ;
+  border: 2px solid $color-primary;
+  color: $text-color-white ;
+  border-radius: 25px;
+  font-size: 16px;
+  font-family: $text-font-notosan-b;
+}
+.button-primary:hover {
+  color: $color-primary ;
+  background: $color-white ;
+  cursor: pointer;
+}
+
+.button-section{
+  color: $color-white;
+  height: 30px !important;
+  border-radius: 25px;
+  font-size: 11px;
+  box-shadow: none !important;
+  border: 1px solid $color-regular;
+}
+
+.btn-contact-danger, .alm-load-more-btn{
+  background: #C1272D;
+  text-align: center;
+  font-size: 16px;
+  line-height: 47px;
+  width: 278px;
+  border: 0;
+  padding: 0;
+  border-radius: 0;
+  color: #fff;
+}
+.alm-btn-wrap{
+  text-align: center;
+}
+
+.btn-close {
+  background: none;
+  border: none;
+  padding: 0;
+}

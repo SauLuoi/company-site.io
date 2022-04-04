@@ -1,0 +1,101 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+
+
+
+
+/// Regular font family
+/// @type List
+$text-font-kozgo: 'KozGoPr6N-Regular', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$text-font-caveat: 'Caveat-Regular', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$text-font-poppins: 'Poppins-Regular', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$text-font-poppins-bold: 'Poppins-Bold', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'KozGoPr6N-Regular', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+/// Regular font family
+/// @type List
+$text-font-notosan-m: 'NotoSansCJKjp-Medium', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$text-font-notosan-b: 'NotoSansCJKjp-Bold', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$text-font-notosan-r: 'NotoSansCJKjp-Regular', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$text-font-kiwi-maru: 'Kiwi Maru','NotoSansCJKjp-Regular', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$text-font-abel: 'Abel','NotoSansCJKjp-Regular', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+
+
+/// Copy background color
+/// @type Color
+$color-btn-hover: #FDF5DA !default;
+$color-primary: #6DCBC0 !default;
+$color-white: #fff !default;
+$color-general: #4D4D4D !default;
+$color-regular: #F3CC45!default;
+
+
+/// Copy text color
+/// @type Color
+$text-color: #231815 !default;
+$text-hover: #20992A !default;
+
+
+/// Copy text color
+/// @type Color
+$text-color-white: #fff !default;
+
+/// Main brand color
+/// @type Color
+$brand-color: #CDA774 !default;
+
+
+/// Light grey
+/// @type Color
+$light-grey: rgb(237, 237, 237) !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: rgb(153, 153, 153) !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: rgb(68, 68, 68) !default;
+
+
+
+
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1200px !default;
+$max-width-content: 1030px !default;
+$max-width-content-1000: 1000px !default;
+$max-width-content-1150: 1150px !default;
+$max-width-content-980: 980px !default;
+$max-width-content-1200: 1200px !default;
+
+
+
+
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+        'small': 320px,
+        'medium': 768px,
+        'large': 1024px,
+) !default;
+
+
+
+
+
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: 'assets/../../' !default;

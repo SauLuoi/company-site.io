@@ -1,0 +1,475 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background: $color-white;
+  font-family: $text-font-abel;
+  color: $text-color;
+  font-size: 18px;
+  line-height: 1.77;
+  font-weight: 400;
+
+  .title-bold {
+    font-weight: bold;
+  }
+
+  @include Responsive(XS) {
+    font-size: 13.5px;
+  }
+}
+
+body *:focus {
+  outline: none;
+}
+
+.background-none {
+  background: none !important;
+}
+
+.block-content-width {
+  max-width: $max-width-content;
+}
+
+.block-content-width-1000 {
+  max-width: $max-width-content-1000;
+}
+
+
+.block-content-width-980 {
+  max-width: $max-width-content-980;
+}
+
+.block-content-width-1150 {
+  max-width: $max-width-content-1150;
+}
+
+.block-content-width-1200 {
+  max-width: $max-width-content-1200;
+}
+
+.page-link:focus {
+  box-shadow: none;
+}
+
+.mr-l30 {
+  margin: auto;
+}
+
+.mb-70 {
+  margin-bottom: 70px !important;
+}
+
+li {
+  list-style: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  color: $text-color;
+  text-decoration: none;
+  transition: .3s all linear;
+
+}
+
+a:hover {
+  color: $text-color;
+  text-decoration: none;
+  opacity: .6;
+}
+
+
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 23px solid transparent;
+  border-right: 23px solid transparent;
+  border-bottom: 23px solid #a67c52;
+}
+
+
+/**
+* Style OwlCarousel
+*/
+.owl-dots {
+  padding-left: 28px;
+  position: absolute;
+  bottom: 21px;
+  left: 0;
+  line-height: 12px;
+
+  button {
+    width: 12px;
+    height: 12px;
+    background: #fff !important;
+    border-radius: 50%;
+    margin-right: 13px;
+
+    &.active {
+      background: #cca774 !important;
+    }
+  }
+}
+
+.background-white {
+  background: #fff !important;
+}
+
+.bg-green-light {
+  background: #BCF1C0 !important;
+}
+
+.bg-pink-light {
+  background: #FFCE99 !important;
+}
+
+.bg-blue-light {
+  background: #ADE0FF !important;
+}
+
+.btn-primary {
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  background: #20992A;
+  border-radius: 23px;
+  padding: 10px 24px;
+  display: inline-block;
+  text-align: center;
+  transition: all .3s;
+  cursor: pointer;
+  border: solid 1px #20992A;
+  @media (max-width: 415px) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  svg {
+    margin-left: 18px;
+  }
+
+  &:hover {
+    color: #20992A;
+    background: #FFFFFF;
+    border: solid 1px #20992A;
+
+    svg {
+      path {
+        fill: #20992A;
+      }
+    }
+  }
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.pc {
+  @include Responsive(XS) {
+    display: none;
+  }
+}
+
+.sp {
+  display: none;
+  @include Responsive(XS) {
+    display: block;
+  }
+}
+
+.block-breadcrumb {
+  position: relative;
+  width: 100%;
+  z-index: 2;
+
+  .container {
+    max-width: 1350px;
+  }
+
+  &.absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5);
+  }
+
+  .breadcrumb {
+    padding: 51px 0 0 0;
+    background-color: rgba(0, 0, 0, 0);
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+
+    li {
+      font-size: 14px;
+      font-family: 'Kiwi Maru';
+      font-weight: 500;
+      line-height: 18px;
+
+      a {
+        letter-spacing: 0.2px;
+        color: #5F5E5E;
+
+        img {
+          margin-right: 11.25px;
+        }
+      }
+
+      &:first-of-type {
+        text-transform: uppercase;
+      }
+
+      &:last-of-type {
+        color: #20992A;
+      }
+    }
+
+    @include Responsive(XS) {
+      padding: 35px 0 0 0;
+    }
+  }
+
+  .breadcrumb-item + .breadcrumb-item::before {
+    content: url("../img/icon_breadcrumb.png");
+  }
+
+  @include Responsive(XS) {
+    position: relative;
+    top: 0;
+    background: none;
+  }
+}
+
+.custom-select {
+  background: #fff url("#{$base-url}img/icon_select.png") no-repeat right .75rem center;
+}
+
+.pagination {
+  justify-content: center;
+
+  li.page-item {
+    width: 40px;
+    height: 40px;
+    margin: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s;
+
+    .page-link {
+      font-family: 'Kiwi Maru';
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 18px;
+      letter-spacing: 0.2px;
+      color: #5F5E5E;
+      background: none;
+      transition: all .3s;
+      border: 1px solid #5F5E5E;
+      padding: 0;
+      margin: 0 !important;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+
+      img:last-child {
+        display: none;
+      }
+
+      &.active {
+        border: 1px solid #20992A;
+        background: #20992A;
+        color: #fff;
+      }
+
+      &:hover {
+        border: 1px solid #20992A;
+        background: #20992A;
+        color: #fff;
+
+        img:first-child {
+          display: none;
+        }
+
+        img:last-child {
+          display: inline-block;
+        }
+      }
+
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+    }
+
+    &:last-of-type, &:first-of-type {
+      border: none;
+
+      .page-link {
+        border: none;
+      }
+    }
+
+    &:hover {
+      //border: 1px solid #20992A;
+      //background: #20992A;
+      //.page-link {
+      //  color: #fff;
+      //}
+    }
+  }
+
+  li.active {
+    //border: 1px solid #20992A;
+    //background: #20992A;
+    //.page-link {
+    //  color: #fff;
+    //}
+  }
+}
+
+.aligncenter {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.alignright {
+  display: block;
+  text-align: right;
+  margin: 0 0 0 auto;
+}
+
+//.content-single{
+//  min-height: 500px;
+//}
+//.playing #play_video{
+//  position: absolute;
+//  left: 0;
+//  top: 0;
+//  width: 100%;
+//  height: 100%;
+//  display: flex;
+//  align-items: center;
+//  justify-content: center;
+//  background: rgba(0,0,0,0)
+//}
+//.paused #play_video{
+//  position: absolute;
+//  left: 0;
+//  top: 0;
+//  width: 100%;
+//  height: 100%;
+//  display: flex;
+//  align-items: center;
+//  justify-content: center;
+//  background: #e2e3e5
+//}
+//.playing #play_video button{
+//  display: none;
+//}
+//.paused #play_video button{
+//  display: inline-block;
+//}
+.maps {
+  iframe {
+    width: 100% !important;
+    height: 418px;
+    @include Responsive(XS) {
+      height: 160px;
+    }
+  }
+}
+
+.block-sidebar-right .menu {
+  max-height: 300px;
+  overflow: auto;
+}
+
+.check-menu-mobile .block-sidebar-right .menu {
+  max-height: inherit;
+  overflow: hidden;
+}
+
+/* width */
+.block-sidebar-right .menu::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.block-sidebar-right .menu::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.block-sidebar-right .menu::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.block-sidebar-right .menu::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+.collapse.show {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  animation: fadeIn 1s;
+}
+
+.open {
+  span {
+    background-color: #231815;
+
+    &:first-of-type {
+      transform: translateY(2.42vw) rotate(-45deg);
+    }
+
+    &:nth-of-type(2) {
+      opacity: 0;
+    }
+
+    &:last-of-type {
+      transform: translateY(-2.42vw) rotate(45deg)
+    }
+  }
+}
+
+ul {
+  padding-left: 0;
+}
+p {
+  margin-bottom: 0;
+}

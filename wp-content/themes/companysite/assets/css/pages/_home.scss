@@ -1,0 +1,655 @@
+.visual {
+  width: 100%;
+  height: 784px;
+  position: relative;
+  //background: url("#{$base-url}img/bg01.jpg") center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  @include Responsive(XS) {
+    height: 120vw;
+  }
+
+  .copy-right {
+    position: absolute;
+    bottom: 50px;
+    left: 3.5%;
+    @include Responsive(XS) {
+      display: none;
+    }
+  }
+
+  .scroll {
+    position: absolute;
+    bottom: 22px;
+    right: 3.3125%;
+    img {
+      @include Responsive(XS) {
+        width: 12.266vw;
+      }
+    }
+  }
+}
+
+.mission {
+  padding: 170px 40px 133px;
+  position: relative;
+  @include Responsive(XS) {
+    padding: 22.66vw 0 22.266vw;
+  }
+
+  &__content {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 255px;
+      right: calc(19.6875% - 40px);
+      width: 10px;
+      height: 108px;
+      background: #d0111b;
+      @include Responsive(XS) {
+        top: 65.933vw;
+        right: 9.33vw;
+        width: 1.33vw;
+        height: 14.4vw;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 30px;
+      right: calc(16.625% - 40px);
+      width: 148px;
+      height: 116px;
+      background: url("#{$base-url}img/bg02.png") top left repeat;
+      @include Responsive(XS) {
+        top: -2.266vw;
+        right: 8.4vw;
+        width: 19.733vw;
+        height: 15.466vw;
+        background-size: 19.733vw auto;
+      }
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 94px;
+    left: 16.875%;
+    width: 27px;
+    height: 88px;
+    background: #d0111b;
+    @include Responsive(XS) {
+      top: 22.8vw;
+      left: 12vw;
+      width: 3.6vw;
+      height: 11.733vw;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 328px;
+    left: 9.5%;
+    width: 148px;
+    height: 88px;
+    background: url("#{$base-url}img/bg02.png") top left repeat;
+    @include Responsive(XS) {
+      top: 91.933vw;
+      left: 6.933vw;
+      width: 19.733vw;
+      height: 11.733vw;
+      background-size: 19.733vw auto;
+    }
+  }
+}
+
+.service {
+  padding: 170px 0 140px;
+  position: relative;
+
+  @include Responsive(XS) {
+    padding: 22.66vw 0 16vw;
+  }
+
+  .container {
+    max-width: 900px;
+  }
+
+  h3 {
+    font-size: 30px;
+    line-height: 1;
+    padding-left: 24px;
+    position: relative;
+    font-weight: bold;
+    margin-bottom: 20px;
+    @include Responsive(XS) {
+      font-size: 6vw;
+      padding-left: 4.8vw;
+      margin-bottom: 3.33vw;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 14px;
+      height: 7px;
+      background: #d0111b;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 71.25%;
+    height: 553px;
+    background: #fafafa;
+    z-index: -1;
+    @include Responsive(XS) {
+      width: 82%;
+      height: 89vw;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 80px;
+    right: 23.5%;
+    width: 148px;
+    height: 116px;
+    background: url("#{$base-url}img/bg02.png") repeat;
+
+    @include Responsive(XS) {
+      top: 6.2vw;
+      right: 27.533vw;
+      width: 19.733vw;
+      height: 15.466vw;
+      background-size: 19.733vw auto;
+    }
+  }
+
+  .entrusted {
+    position: relative;
+    padding: 172px 0 100px;
+
+    @include Responsive(XS) {
+      padding: 11.933vw 0 14.4vw;
+    }
+
+    .container {
+      max-width: 1100px;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 70px;
+        left: 310px;
+        width: 10px;
+        height: 108px;
+        background: #d0111b;
+        @include Responsive(XS) {
+          top: 70vw;
+          left: 9.466vw;
+          width: 1.33vw;
+          height: 14.4vw;
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 148px;
+        height: 118px;
+        background: url("#{$base-url}img/bg02.png") repeat;
+        @include Responsive(XS) {
+          top: 5.933vw;
+          right: 2.133vw;
+          width: 16.133vw;
+          height: 8vw;
+          left: auto;
+          background-size: 19.733vw auto;
+        }
+      }
+    }
+
+    &-img {
+      @include Responsive(XS) {
+        margin-bottom: 30px;
+      }
+
+      img {
+        width: 93%;
+      }
+    }
+
+    &-text {
+      padding-left: 61px;
+      @include Responsive(XS) {
+        padding-left: 20px;
+      }
+    }
+  }
+
+  .case {
+    background: #fafafa;
+    padding: 80px 0 114px;
+    @include Responsive(XS) {
+      padding: 16vw 0 14.4vw;
+    }
+
+
+    .title-24 {
+      font-size: 30px;
+      margin-bottom: 60px;
+      @include Responsive(XS) {
+        margin-bottom: 30px;
+      }
+    }
+
+    .container {
+      max-width: 1040px;
+    }
+
+    &-carousel {
+      //max-width: calc(100% - 70px * 2);
+      margin: 0 auto;
+      @include Responsive(XS) {
+        max-width: 100%;
+        width: 78.4vw;
+      }
+
+      &-item {
+        border-top: 1px solid #231815;
+        padding-top: 34px;
+
+        p {
+          margin-bottom: 0;
+        }
+
+        img {
+          margin: 22px 0;
+          display: block;
+          width: 100%;
+        }
+      }
+
+      .owl-nav {
+        button {
+          position: absolute;
+          height: 75px;
+          width: 36px;
+          top: calc((100% - 75px) / 2);
+          @include Responsive(XS) {
+            width: 4.8vw;
+            height: 10vw;
+            top: calc((100% - 10vw) / 2);
+          }
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .owl-prev {
+          left: -70px;
+          @include Responsive(XS) {
+            left: -9vw;
+          }
+        }
+
+        .owl-next {
+          right: -70px;
+          @include Responsive(XS) {
+            right: -9vw;
+          }
+        }
+      }
+    }
+  }
+
+  .labo {
+    position: relative;
+    padding: 80px 0 108px;
+    @include Responsive(XS) {
+      padding: 13.33vw 0 14.4vw;
+    }
+
+    .container {
+      max-width: 1100px;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 48px;
+        left: 50px;
+        width: 10px;
+        height: 108px;
+        background: #d0111b;
+        @include Responsive(XS) {
+          top: 70vw;
+          left: 9.466vw;
+          width: 1.33vw;
+          height: 14.4vw;
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 50px;
+        width: 148px;
+        height: 116px;
+        background: url("#{$base-url}img/bg02.png");
+        @include Responsive(XS) {
+          top: 6.933vw;
+          bottom: auto;
+          left: auto;
+          right: 6.133vw;
+          width: 16.133vw;
+          height: 8vw;
+          background-size: 19.733vw auto;
+        }
+      }
+    }
+
+    &-img {
+      @include Responsive(XS) {
+        text-align: center;
+        margin: 0 auto 8vw;
+      }
+
+      img {
+        width: 93%;
+      }
+    }
+
+    &-text {
+    }
+  }
+
+  .merit {
+    padding: 90px 40px 92px;
+    background: url("#{$base-url}img/bg03.jpg") center no-repeat;
+    background-size: cover;
+    @include Responsive(XS) {
+      padding: 16vw 0 14.4vw;
+    }
+
+    .container {
+      max-width: 1100px;
+    }
+
+    &-item {
+      text-align: center;
+      color: #fff;
+
+      .number {
+        font-family: 'Abel', sans-serif;
+        font-weight: bold;
+        color: #d0111b;
+        text-align: center;
+        font-size: 48px;
+        line-height: 1;
+        display: block;
+      }
+
+      img {
+        width: 69px;
+        margin: 20px 0 30px 0;
+      }
+    }
+  }
+
+  .original {
+    padding: 105px 0 0 0;
+
+    @include Responsive(XS) {
+      padding: 16vw 0 0;
+    }
+
+    .title {
+      margin-bottom: 40px;
+    }
+
+    .container {
+      max-width: 890px;
+    }
+
+    .col-md-3 {
+      width: 23.69%;
+
+      img {
+        max-width: 210px;
+        width: 100%;
+      }
+    }
+
+    .col-md-9 {
+      width: 72.247%;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.information {
+  padding: 150px 40px 140px;
+  background: #fafafa;
+  @include Responsive(XS) {
+    padding: 25vw 0;
+  }
+
+  .container {
+    max-width: 950px;
+  }
+
+  &__content {
+    padding-left: 0;
+
+    .info {
+      border-bottom: 1px solid #d3d3d3;
+      padding: 24px 38px;
+      font-size: 20px;
+      @include Responsive(XS) {
+        padding: 3.9vw;
+        font-size: 13.5px;
+      }
+
+      &:first-of-type {
+        border-top: 1px solid #d3d3d3;
+      }
+
+      .date {
+        margin-right: 28px;
+        @include Responsive(XS) {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.about {
+  padding: 150px 40px 100px;
+  @include Responsive(XS) {
+    padding: 25vw 0;
+  }
+
+  .container {
+    max-width: 950px;
+  }
+
+  table {
+    tr {
+      &:nth-of-type(odd) {
+        background: #fafafa;
+        @include Responsive(XS) {
+          background: none;
+        }
+      }
+
+      td:first-of-type {
+        border-top: none;
+        vertical-align: middle;
+        padding: 24px 0;
+        width: 137px;
+        text-align: center;
+        @include Responsive(XS) {
+          width: 100%;
+          display: block;
+          padding: 2.6vw 3.9vw;
+          text-align: left;
+          background: #fafafa;
+        }
+      }
+
+      td {
+        border-top: none;
+        padding: 24px 0 24px 68px;
+        @include Responsive(XS) {
+          width: 100% !important;
+          display: block;
+          padding: 2.6vw 3.9vw;
+          text-align: left;
+          height: auto !important;
+        }
+      }
+    }
+  }
+}
+
+.contact {
+  padding: 70px 0 0 0;
+
+  .container {
+    max-width: 1030px;
+  }
+
+  .sub-title {
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  form {
+    label {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+      font-family: 'arial', helvetica, sans-serif;
+    }
+
+    label.required {
+      &::after {
+        content: "*";
+        color: red;
+      }
+    }
+
+    input:not([type=file]) {
+      background-color: #f5f8fa;
+    }
+
+    .col {
+      margin-bottom: 18px;
+    }
+
+    .col-6 {
+      .form-control {
+        max-width: 500px;
+      }
+    }
+
+    .form-control {
+      width: 100%;
+      height: 40px;
+      padding: 9px 10px;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      font-weight: normal;
+      line-height: 22px;
+      color: #33475b;
+      border: 1px solid #cbd6e2;
+      box-sizing: border-box;
+      border-radius: 3px;
+    }
+
+    textarea.form-control {
+      height: auto;
+      background: #f5f8fa;
+    }
+
+    .btn-submit {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      cursor: pointer;
+      display: inline-block;
+      font-weight: 700;
+      line-height: 12px;
+      position: relative;
+      text-align: center;
+      transition: all .15s linear;
+      background-color: #ff7a59;
+      border-color: #ff7a59;
+      color: #fff;
+      border-radius: 3px;
+      border-style: solid;
+      border-width: 1px;
+      font-size: 14px;
+      padding: 12px 24px;
+      margin-top: 18px;
+      margin-bottom: 18px;
+
+      &:hover {
+        opacity: .6;
+      }
+    }
+
+    .sproket {
+      font-size: 14px;
+      padding-bottom: 40px;
+      position: relative;
+      color: #9fa0a2;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      position: relative;
+      padding-left: 30px;
+
+      a {
+        color: #00a4bd;
+        font-weight: 400;
+
+        &:hover {
+          text-decoration: underline;
+          opacity: 1;
+        }
+      }
+
+      &::before {
+        content: "";
+        background: url("#{$base-url}img/sproket.png") no-repeat;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 30px;
+        height: 30px;
+        background-size: contain;
+      }
+    }
+  }
+}
